@@ -3823,3 +3823,62 @@ body.nav-open{overflow:hidden}
   }
 }
 </style>
+
+
+<style id="aiolec-advisor-phone-suggestions-desktop-black">
+/* PHONE: keep the entire intro inside the viewport so the prompt chips
+   are not clipped at the bottom. */
+@media (max-width:700px){
+  #aiolec-advisor .advisor-intro{
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+    -webkit-overflow-scrolling:touch!important;
+    scrollbar-width:none!important;
+    justify-content:flex-start!important;
+  }
+
+  #aiolec-advisor .advisor-intro::-webkit-scrollbar{
+    display:none!important;
+  }
+
+  #aiolec-advisor .advisor-visual{
+    height:clamp(235px,30svh,275px)!important;
+    margin:0 -17px!important;
+    flex-shrink:0!important;
+  }
+
+  #aiolec-advisor .advisor-visual img{
+    width:116%!important;
+    height:116%!important;
+  }
+
+  #aiolec-advisor .advisor-intro-copy{
+    padding-bottom:8px!important;
+  }
+
+  #aiolec-advisor .advisor-try{
+    margin:14px 0 0!important;
+    padding-bottom:10px!important;
+  }
+
+  #aiolec-advisor .advisor-prompts{
+    max-width:360px!important;
+  }
+}
+
+/* DESKTOP: make the right half materially darker so the black image
+   disappears into the background instead of sitting on a blue field. */
+@media (min-width:701px){
+  #aiolec-advisor::before{
+    background:
+      radial-gradient(700px 500px at 13% 50%,rgba(24,54,102,.46),transparent 72%),
+      linear-gradient(90deg,#071120 0%,#050a12 34%,#020407 58%,#000 76%,#000 100%)!important;
+  }
+
+  #aiolec-advisor .advisor-card{
+    background:
+      radial-gradient(680px 480px at 18% 52%,rgba(22,51,96,.32),transparent 72%),
+      linear-gradient(105deg,#07111f 0%,#04080e 38%,#010203 62%,#000 80%,#000 100%)!important;
+  }
+}
+</style>
